@@ -1,0 +1,15 @@
+* text=auto
+
+# Everything that ends up inside the container, or that docker compose reads,
+# must have LF line endings. A stray CRLF in .env breaks the port mapping, and
+# a stray CRLF in a config file breaks it silently on the server.
+.env        text eol=lf
+.gitignore  text eol=lf
+*.sh        text eol=lf
+*.yml       text eol=lf
+*.yaml      text eol=lf
+*.md        text eol=lf
+*.conf      text eol=lf
+*.txt       text eol=lf
+*.json      text eol=lf
+submission/** text eol=lf
