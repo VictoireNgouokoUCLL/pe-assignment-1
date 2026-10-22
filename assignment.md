@@ -1,6 +1,6 @@
 # Assignment 1 — Take over a server
 
-**Modules 1–5 · 3 of the 20 points · deadline Sunday 15 November 2026, 23:59**
+**Modules 1–5 · 3 of the 20 points · deadline Sunday 8 November 2026, 23:59**
 
 ---
 
