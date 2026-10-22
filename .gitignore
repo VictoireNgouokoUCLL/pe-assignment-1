@@ -9,6 +9,9 @@ id_*
 keys/
 !*.pub
 
+# The zip you upload to Toledo - never commit it.
+*.zip
+
 # Docker leftovers
 .DS_Store
 

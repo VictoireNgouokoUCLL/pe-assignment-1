@@ -316,6 +316,33 @@ stops you from losing points over a file you forgot.
 
 ---
 
+## Hand in on Toledo
+
+Your **official submission is a zip file on Toledo**. Toledo is the only place
+that links your work to you; your GitHub account does not. What is in that zip
+is what gets marked.
+
+Commit and push first, then make the zip from your last commit, on your laptop,
+in the repository folder:
+
+```bash
+git archive --format=zip -o pe-assignment-1.zip HEAD submission/ spec.md .env
+```
+
+Upload `pe-assignment-1.zip` to the assignment on Toledo before **Sunday
+8 November 2026, 23:59**.
+
+- `git archive` packs what you **committed**, not what is in your folder. A
+  change you did not commit is not in the zip.
+- The zip records which commit it came from. Keep your repository pushed: your
+  git history is still assessed (criterion 6), and the zip must match a commit
+  in it.
+- Changed something after uploading? Commit, push, make a new zip and upload it
+  again before the deadline. The last upload counts.
+- Do not unpack, edit or repack the zip by hand.
+
+---
+
 ## How this is marked
 
 Six criteria, each scored 0, 1 or 2 — twelve points, converted to your 3.
