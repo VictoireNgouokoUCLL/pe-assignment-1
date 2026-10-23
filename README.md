@@ -69,5 +69,7 @@ git add submission/ spec.md .env && git commit -m "assignment 1: <what you did>"
   is your responsibility.
 - Your repository is private. Keep it that way.
 
-The practical exam in January tests the same skills without your notes and
-without this repository. What you build here is the rehearsal.
+The practical exam in January tests the same skills on a fresh server, with
+different parameters and limited time. It is open book: you may use your own
+notes and files, this repository included. They only help if you understand
+what is in them. What you build here is the rehearsal.
