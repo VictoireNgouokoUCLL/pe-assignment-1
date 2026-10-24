@@ -135,8 +135,15 @@ Tools for when a login is refused and the client only says
   The server prints its reasoning and exits. Start the service again afterwards
   with `service ssh start`.
 
-**Hand in:** `submission/sshd_hardening.conf` — your drop-in from
-`/etc/ssh/sshd_config.d/`, copied to `/lab/submission/`.
+Name your drop-in `/etc/ssh/sshd_config.d/sshd_hardening.conf`. sshd only
+reads files in that directory that end in `.conf`; a file with any other ending
+is silently ignored.
+
+**Hand in:** a copy of your drop-in.
+
+```bash
+cp /etc/ssh/sshd_config.d/sshd_hardening.conf /lab/submission/
+```
 
 ---
 
