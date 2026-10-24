@@ -47,6 +47,37 @@ less than a project.
 
 ---
 
+## Read the whole assignment first
+
+**The parts below are not in the order in which you can do them.** They are
+grouped by topic, not by step. Part 1, for example, already needs packages that
+part 3 is about, and part 2 needs a service that only exists once those
+packages are installed. Working through the parts from top to bottom will get
+you stuck.
+
+So before you type a single command: read the whole assignment, hints
+included, down to the end. Then make your own plan: what depends on what, and
+in which order you will do the parts. The fault you inherited (part 6) can get
+in your way at any point along that plan.
+
+---
+
+## Working method *(module 4)*
+
+Your git history is part of the assessment, so this applies from your very
+first step, not only at the end:
+
+- Commit as you go: **at least three commits**, spread over more than
+  one day, with messages that say what changed and why.
+- One commit containing everything on the evening of the deadline scores the
+  lowest band on this criterion.
+- Never commit a private key, a password or a `.pem` file.
+
+The exact `git add` command is under *Before you push*, near the end. Use it
+for every commit.
+
+---
+
 ## Part 1 — Accounts, privileges and locale *(module 3)*
 
 Create the shared group and the three accounts from `spec.md`, with exactly
@@ -291,17 +322,6 @@ In `submission/justification.md`, about **400 words in total**:
   back, and what you changed about it. If you used none, write that.
 
 In your own words. It is short on purpose.
-
----
-
-## Working method *(module 4)*
-
-Your git history is part of the assessment. Commit as you go: at least three
-commits with messages that say what changed and why. One commit containing
-everything on the evening of the deadline scores the lowest band on this
-criterion.
-
-Never commit a private key, a password or a `.pem` file.
 
 ---
 
