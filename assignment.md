@@ -1,6 +1,6 @@
 # Assignment 1 — Take over a server
 
-**Modules 1–5 · 3 of the 20 points · deadline Sunday 8 November 2026, 23:59**
+**Modules 1–5 · 3 of the 20 points · deadline Tuesday 10 November 2026, 23:59**
 
 ---
 
@@ -356,8 +356,8 @@ in the repository folder:
 git archive --format=zip -o pe-assignment-1.zip HEAD submission/ spec.md .env
 ```
 
-Upload `pe-assignment-1.zip` to the assignment on Toledo before **Sunday
-8 November 2026, 23:59**.
+Upload `pe-assignment-1.zip` to the assignment on Toledo before **Tuesday
+10 November 2026, 23:59**.
 
 - `git archive` packs what you **committed**, not what is in your folder. A
   change you did not commit is not in the zip.

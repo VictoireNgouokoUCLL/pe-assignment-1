@@ -6,7 +6,7 @@
 **This assignment counts towards your marks: 3 of the 20 points.**
 It covers modules 1–5. The weekly labs are your preparation for it.
 
-**Deadline: Sunday 8 November 2026, 23:59** — you hand in a zip on Toledo
+**Deadline: Tuesday 10 November 2026, 23:59** — you hand in a zip on Toledo
 before that moment. See "Hand in on Toledo" at the end of `assignment.md`.
 
 ---
