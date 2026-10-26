@@ -135,7 +135,7 @@ your host you connect with `ssh -p <your port> <user>@localhost`.
 | Password authentication is refused for everyone |
 | The service account cannot log in over SSH |
 
-Two things to think about, because they come back in the marking:
+Two things to think about, and to answer in your justification (part 8):
 
 - Your key pair is generated on **your own machine**, not on the server. Say in
   your justification which half goes where, and why that direction matters.
@@ -313,6 +313,10 @@ expected, that is a finding — deal with it now rather than in January.
 
 ## Part 8 — Justification
 
+This part is **required, but it does not count towards your marks**. It is
+where you show yourself, and your marker, that you know why your server looks
+the way it does: the same questions come back at the practical exam.
+
 In `submission/justification.md`, about **400 words in total**:
 
 - **Three choices you made**, each with your reasoning. Not "I ran this
@@ -362,7 +366,7 @@ Upload `pe-assignment-1.zip` to the assignment on Toledo before **Tuesday
 - `git archive` packs what you **committed**, not what is in your folder. A
   change you did not commit is not in the zip.
 - The zip records which commit it came from. Keep your repository pushed: your
-  git history is still assessed (criterion 6), and the zip must match a commit
+  git history is still assessed (criterion 6, working method), and the zip must match a commit
   in it.
 - Changed something after uploading? Commit, push, make a new zip and upload it
   again before the deadline. The last upload counts.
@@ -372,15 +376,18 @@ Upload `pe-assignment-1.zip` to the assignment on Toledo before **Tuesday
 
 ## How this is marked
 
-Six criteria, each scored 0, 1 or 2 — twelve points, converted to your 3.
+Six criteria, each on four levels: excellent (100%), sufficient (67%),
+insufficient (33%) and poor (0%). The weighted total, out of 100%, is converted
+to your 3 points and rounded to half a point.
 
-| | Criterion |
-|---|---|
-| 1 | Accounts, group membership, sudo policy and locale match the specification |
-| 2 | SSH hardened as specified and demonstrably working |
-| 3 | Time configuration and backup with retention, correctly scheduled |
-| 4 | Evidence matches your specification; the fault's root cause is found and fixed at the source |
-| 5 | Three choices defended in your own words, AI statement present |
-| 6 | Meaningful commits spread over time, package state in order, no secrets in the repository |
+| | Criterion | Weight |
+|---|---|---|
+| 1 | Accounts, group membership, sudo policy and locale match the specification | 15% |
+| 2 | SSH hardened as specified and demonstrably working | 20% |
+| 3 | Time: timezone consistent, chrony on the required pool with a selected source | 15% |
+| 4 | Backup with dated directories and retention, run by cron as the service account | 20% |
+| 5 | The fault: root cause found, fixed at the source, and visible in your `report.txt` | 20% |
+| 6 | Working method: meaningful commits spread over more than one day, package state in order, no secrets in the repository | 10% |
 
-The full rubric is on Toledo.
+The justification (part 8) is required but not marked. The full rubric, with
+what each level means, is on Toledo.
