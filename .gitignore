@@ -1,0 +1,19 @@
+# Never commit private keys.
+id_rsa
+id_ed25519
+id_ecdsa
+*.pem
+*.key
+*_ed25519
+id_*
+keys/
+!*.pub
+
+# The zip you upload to Toledo - never commit it.
+*.zip
+
+# Docker leftovers
+.DS_Store
+
+# NOTE: .env and spec.md are generated but MUST be committed - they are your
+# personal specification, not secrets. Do not add them here.

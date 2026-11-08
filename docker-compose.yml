@@ -1,0 +1,18 @@
+services:
+  server:
+    image: debian:bookworm
+    hostname: ${SASM_HOSTNAME:?run ./bin/personalise.sh first}
+    container_name: sasm-assignment1
+    environment:
+      SASM_STUDENT: ${SASM_STUDENT:?run ./bin/personalise.sh first}
+    ports:
+      - "${SASM_SSH_PORT:?run ./bin/personalise.sh first}:22"
+    volumes:
+      - .:/lab
+      - backup_data:/backup
+    command: bash /lab/setup/bootstrap.sh
+    stdin_open: true
+    tty: true
+
+volumes:
+  backup_data:

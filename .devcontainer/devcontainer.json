@@ -1,0 +1,14 @@
+{
+  "name": "SASM Foundations \u2014 Assignment 1",
+  "image": "debian:bookworm",
+  "remoteUser": "root",
+  "postCreateCommand": "apt-get update -qq && apt-get install -y -qq curl git nano less procps net-tools iproute2 openssh-client && echo 'Codespaces is for reading and writing files. Run the server itself with Docker on your own machine.'",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "files.autoSave": "afterDelay"
+      }
+    }
+  }
+}
