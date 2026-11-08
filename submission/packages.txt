@@ -1,0 +1,10 @@
+Desired=Unknown/Install/Remove/Purge/Hold
+| Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
+|/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
+||/ Name           Version            Architecture Description
++++-==============-==================-============-=================================================================
+ii  chrony         4.3-2+deb12u3      amd64        Versatile implementation of the Network Time Protocol
+ii  cron           3.0pl1-162         amd64        process scheduling daemon
+ii  openssh-server 1:9.2p1-2+deb12u10 amd64        secure shell (SSH) server, for secure access from remote machines
+ii  rsync          3.2.7-1+deb12u6    amd64        fast, versatile, remote (and local) file-copying tool
+ii  sudo           1.9.13p3-1+deb12u4 amd64        Provide limited super user privileges to specific users
