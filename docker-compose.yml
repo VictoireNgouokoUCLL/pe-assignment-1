@@ -10,6 +10,8 @@ services:
     volumes:
       - .:/lab
       - backup_data:/backup
+    cap_add:
+      - SYS_TIME
     command: bash /lab/setup/bootstrap.sh
     stdin_open: true
     tty: true
