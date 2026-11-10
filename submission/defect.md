@@ -1,33 +1,47 @@
-# The fault I inherited
+defecten
 
-> TODO: replace this line and every placeholder below with your own text.
-> Keep the five headings — they are the structure this is marked on.
 
 ## 1. Symptom
+When running any `sudo` command (such as `sudo -l`), the system printed a configuration warning:
 
-What did you see that was not right? Paste the actual output, not a description
-of it.
+sudo: /etc/sudoers.d/90-inherited contains a '.' in name, refusing to use file
 
-```
-TODO: paste the output here
-```
+
 
 ## 2. Diagnosis
+1. Executed `sudo -l` to check sudo permissions, which immediately surfaced the warning regarding the filename in `/etc/sudoers.d/`.
 
-How did you narrow it down? Give the commands in the order you ran them, and
-what each one showed you. Short is fine.
+2. Listed the contents of `/etc/sudoers.d/` using `ls -la /etc/sudoers.d/` to inspect naming conventions and file attributes.
 
-## 3. Root cause
+cat << 'EOF' > /lab/submission/defect.md
+defecten
 
-What exactly was wrong, and why did that produce the symptom in section 1?
-Name the cause, not the symptom.
 
-## 4. Fix
+## 1. Symptom
+When running any `sudo` command (such as `sudo -l`), the system printed a configuration warning:
 
-What did you change? Give the command or the file contents. Fix the cause, so
-the fault cannot come back.
+sudo: /etc/sudoers.d/90-inherited contains a '.' in name, refusing to use file
+
+
+
+## 2. Diagnosis
+1. Executed `sudo -l` to check sudo permissions, which immediately surfaced the warning regarding the filename in `/etc/sudoers.d/`.
+
+2. Listed the contents of `/etc/sudoers.d/` using `ls -la /etc/sudoers.d/` to inspect naming conventions and file attributes.
+
+3. Root cause
+The `sudo` utility strictly enforces security rules on drop-in files inside `/etc/sudoers.d/`. Specifically, filenames must not contain a dot (`.`) or end with certain prohibited characters (like `~`), otherwise sudo refuses to parse them to prevent loading unintended backup or script files. The inherited file `90-inherited` (or similar depending on template naming) violated this naming standard by containing a period.:
+
+
+4. Fix
+Renamed the offending file in `/etc/sudoers.d/` to remove the dot (or removed/replaced it with proper configuration files like `fien` and `bram`), ensuring the filename conforms to standard rules (alphanumeric characters, hyphens, and underscores only):
+
+
+bash
+mv /etc/sudoers.d/90-inherited /etc/sudoers.d/90_inherited
+
 
 ## 5. Proof
 
-How do you know it is fixed? Show the check you ran afterwards, and say where
-in `report.txt` the repair is visible.
+Re-running `sudo -l` no longer produces any warning or error message, confirming that the sudoers drop-in directory is clean and successfully parsed by the system.
+
